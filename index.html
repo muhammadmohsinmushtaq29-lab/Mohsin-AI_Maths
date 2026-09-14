@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mohsin AI Maths — an AI mathematics tutor for Nursery to Class 12. Solve, understand, and learn step by step.">
+  <title>Mohsin AI Maths — Solve. Understand. Learn.</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Mohsin AI Maths home">
+      <span class="logo">M</span><span><b>Mohsin AI Maths</b><small>AI Mathematics Tutor</small></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#solver">AI Solver</a><a href="#tutor">AI Tutor</a><a href="#practice">Practice</a><a href="#quiz">Quiz</a><a href="#pricing">Pricing</a>
+    </nav>
+    <div class="actions">
+      <select id="lang" aria-label="Language"><option value="en">English</option><option value="ur">اردو</option><option value="ps">پښتو</option></select>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
+      <a class="btn btn-primary small" href="#solver">Start Solving</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy">
+        <span class="eyebrow">SMARTER MATHS • NURSERY TO CLASS 12</span>
+        <h1>Your AI<br><span>Mathematics Tutor.</span></h1>
+        <p>Solve. Understand. Learn. Get clear, step-by-step mathematics help that explains not just <em>what</em> the answer is, but <em>why</em>.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#solver">Solve with AI →</a><a class="btn btn-ghost" href="#practice">Explore Practice</a></div>
+        <div class="trust"><span>✓ Step-by-step</span><span>✓ Multilingual</span><span>✓ Class 1–12+</span></div>
+      </div>
+      <div class="solver-card" id="solver">
+        <div class="card-head"><div><span class="status-dot"></span> AI Maths Solver</div><span class="pill">Online</span></div>
+        <textarea id="question" placeholder="Type your maths question here…&#10;&#10;Example: Solve 2x + 5 = 17"></textarea>
+        <div class="input-row">
+          <label class="upload"><input id="imageInput" type="file" accept="image/*">⌁ Upload Question</label>
+          <button id="cameraBtn" class="tool-btn">◉ Take Photo</button>
+          <button id="voiceBtn" class="tool-btn">♬ Voice</button>
+        </div>
+        <div id="imagePreview" class="preview hidden"></div>
+        <div class="solver-options"><select id="classSelect"><option>Nursery</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select><select id="topicSelect"><option>Auto Detect Topic</option><option>Arithmetic</option><option>Fractions</option><option>Algebra</option><option>Geometry</option><option>Trigonometry</option><option>Statistics</option><option>Probability</option><option>Matrices</option><option>Calculus</option><option>Word Problems</option></select></div>
+        <button id="solveBtn" class="btn btn-primary solve">Solve with AI <span>→</span></button>
+        <div id="result" class="result hidden"></div>
+      </div>
+    </section>
+
+    <section class="stats"><div><b>Nursery–12</b><span>Class support</span></div><div><b>3</b><span>Languages</span></div><div><b>∞</b><span>Ways to learn</span></div><div><b>24/7</b><span>AI tutor</span></div></section>
+
+    <section class="section" id="tutor">
+      <div class="section-title"><span class="eyebrow">LEARN, DON'T JUST COPY</span><h2>One question. A complete explanation.</h2><p>Mohsin AI Maths works like a patient tutor: identify the method, show each step, explain the reason, and verify the result when possible.</p></div>
+      <div class="feature-grid">
+        <article><div class="feature-icon">∑</div><h3>AI Maths Solver</h3><p>Get final answers with structured, easy-to-follow working.</p></article>
+        <article><div class="feature-icon">✦</div><h3>AI Tutor</h3><p>Ask follow-up questions and learn concepts in simpler words.</p></article>
+        <article><div class="feature-icon">✓</div><h3>Answer Verification</h3><p>Check calculations and substitute answers back when appropriate.</p></article>
+        <article><div class="feature-icon">文</div><h3>English • اردو • پښتو</h3><p>Switch your learning language whenever you want.</p></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="practice">
+      <div class="section-title"><span class="eyebrow">PRACTICE MODE</span><h2>Build confidence through practice.</h2></div>
+      <div class="practice-panel"><div><h3>Personalized practice</h3><p>Choose your class, topic and difficulty. Generate questions, reveal explanations, and track your progress.</p><div class="controls"><select><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select><select><option>Algebra</option><option>Fractions</option><option>Geometry</option><option>Trigonometry</option></select><select><option>Easy</option><option>Medium</option><option>Hard</option></select></div><button class="btn btn-primary" id="practiceBtn">Generate Practice</button></div><div class="practice-preview"><span class="mini-label">TODAY'S PROGRESS</span><strong>72%</strong><div class="progress"><i></i></div><p>18 of 25 questions completed</p></div></div>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="section-title"><span class="eyebrow">QUIZ MODE</span><h2>Turn learning into a challenge.</h2><p>Practice with scored quizzes, instant explanations, and progress tracking.</p></div>
+      <div class="quiz-grid"><div class="quiz-card"><b>10</b><span>Questions</span></div><div class="quiz-card"><b>15 min</b><span>Suggested time</span></div><div class="quiz-card"><b>Easy → Hard</b><span>Difficulty</span></div><div class="quiz-card"><b>100%</b><span>Explanation after quiz</span></div></div>
+    </section>
+
+    <section class="section alt" id="dashboard">
+      <div class="section-title"><span class="eyebrow">STUDENT DASHBOARD</span><h2>See how you are improving.</h2></div>
+      <div class="dashboard-grid"><div class="dash-card"><span>Questions solved</span><b>128</b><small>+18 this week</small></div><div class="dash-card"><span>Practice accuracy</span><b>84%</b><small>Keep going!</small></div><div class="dash-card"><span>Topics practiced</span><b>12</b><small>Across 4 subjects</small></div><div class="dash-card"><span>Saved solutions</span><b>36</b><small>Ready to review</small></div></div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="section-title"><span class="eyebrow">SIMPLE PRICING</span><h2>Start free. Learn more with Premium.</h2></div>
+      <div class="pricing-grid">
+        <article class="price-card"><span class="plan">FREE</span><h3>Starter</h3><div class="price">Rs. 0 <small>/ month</small></div><ul><li>Limited AI questions</li><li>Basic step-by-step solutions</li><li>Basic practice</li><li>English, Urdu & Pashto</li></ul><button class="btn btn-ghost">Get Started</button></article>
+        <article class="price-card featured"><span class="plan">PREMIUM</span><h3>Learn Unlimited</h3><div class="price">Coming Soon</div><ul><li>Higher / unlimited limits according to plan</li><li>Image question solving</li><li>Advanced mathematics</li><li>Detailed explanations</li><li>Unlimited practice & quizzes</li><li>Saved solutions & progress tracking</li></ul><button class="btn btn-primary">Choose Premium</button></article>
+      </div>
+    </section>
+
+    <section class="section about" id="about"><div class="section-title"><span class="eyebrow">ABOUT</span><h2>Made to make maths easier.</h2><p>Mohsin AI Maths is designed around one simple idea: students learn better when answers are explained clearly. The interface is built for quick questions, focused practice, and genuine understanding.</p></div></section>
+    <section class="section contact" id="contact"><div class="contact-card"><div><span class="eyebrow">CONTACT</span><h2>Have a question?</h2><p>For support, partnerships, or feedback, contact the Mohsin AI Maths team.</p></div><a class="btn btn-primary" href="mailto:hello@mohsinaimaths.example">Email Support</a></div></section>
+  </main>
+
+  <footer><div class="footer-brand"><span class="logo">M</span><b>Mohsin AI Maths</b></div><div class="footer-links"><a href="#about">About</a><a href="#contact">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a></div><p>© 2026 Mohsin AI Maths. All Rights Reserved.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
